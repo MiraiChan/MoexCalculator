@@ -12,13 +12,16 @@ struct ContentView: View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
-                .foregroundStyle(.tint)
+                
             Text("Hello, world!")
+                .padding()
         }
-        .padding()
+        .foregroundColor(.accentColor)
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
