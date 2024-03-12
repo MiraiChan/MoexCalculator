@@ -13,6 +13,7 @@
 		0178175D2B8FFF4200EC5AB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0178175C2B8FFF4200EC5AB0 /* Preview Assets.xcassets */; };
 		017817642BA08B0100EC5AB0 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017817632BA08B0100EC5AB0 /* Currency.swift */; };
 		017817662BA08D6300EC5AB0 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017817652BA08D6300EC5AB0 /* CalculatorModel.swift */; };
+		017817682BA08F7A00EC5AB0 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017817672BA08F7A00EC5AB0 /* CalculatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		0178175C2B8FFF4200EC5AB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		017817632BA08B0100EC5AB0 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		017817652BA08D6300EC5AB0 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		017817672BA08F7A00EC5AB0 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				017817572B8FFF4000EC5AB0 /* ContentView.swift */,
 				017817632BA08B0100EC5AB0 /* Currency.swift */,
 				017817652BA08D6300EC5AB0 /* CalculatorModel.swift */,
+				017817672BA08F7A00EC5AB0 /* CalculatorViewModel.swift */,
 				017817592B8FFF4200EC5AB0 /* Assets.xcassets */,
 				0178175B2B8FFF4200EC5AB0 /* Preview Content */,
 			);
@@ -147,6 +150,7 @@
 				017817582B8FFF4000EC5AB0 /* ContentView.swift in Sources */,
 				017817562B8FFF4000EC5AB0 /* MoexCalculatorApp.swift in Sources */,
 				017817662BA08D6300EC5AB0 /* CalculatorModel.swift in Sources */,
+				017817682BA08F7A00EC5AB0 /* CalculatorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
