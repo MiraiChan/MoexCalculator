@@ -8,12 +8,12 @@
 import Foundation
 
 final class CalculatorViewModel: ObservableObject {
-
+    
     private var model = CalculatorModel()
-
+    
     @Published var topCurrency: Currency = .CNY
     @Published var bottomCurrency: Currency = .RUR
-        
+    
     @Published var topAmount: Double = 0
     @Published var bottomAmount: Double = 0
     

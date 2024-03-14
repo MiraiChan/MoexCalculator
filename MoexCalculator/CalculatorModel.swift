@@ -10,7 +10,7 @@ import Foundation
 struct CalculatorModel {
     
     private(set) var currencyRates: CurrencyRates = [.RUR: 1, .CNY: 12]
- 
+    
     mutating func setCurrencyRates(_ currencyRates: CurrencyRates) {
         self.currencyRates = currencyRates
     }

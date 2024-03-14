@@ -14,6 +14,8 @@
 		017817662BA08D6300EC5AB0 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017817652BA08D6300EC5AB0 /* CalculatorModel.swift */; };
 		017817682BA08F7A00EC5AB0 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017817672BA08F7A00EC5AB0 /* CalculatorViewModel.swift */; };
 		0178176A2BA1B55B00EC5AB0 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017817692BA1B55B00EC5AB0 /* CalculatorView.swift */; };
+		0178176C2BA26EF700EC5AB0 /* CurrencyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0178176B2BA26EF700EC5AB0 /* CurrencyPicker.swift */; };
+		0178176E2BA305D700EC5AB0 /* CurrencyInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0178176D2BA305D700EC5AB0 /* CurrencyInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		017817652BA08D6300EC5AB0 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		017817672BA08F7A00EC5AB0 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		017817692BA1B55B00EC5AB0 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		0178176B2BA26EF700EC5AB0 /* CurrencyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPicker.swift; sourceTree = "<group>"; };
+		0178176D2BA305D700EC5AB0 /* CurrencyInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				017817632BA08B0100EC5AB0 /* Currency.swift */,
 				017817652BA08D6300EC5AB0 /* CalculatorModel.swift */,
 				017817672BA08F7A00EC5AB0 /* CalculatorViewModel.swift */,
+				0178176B2BA26EF700EC5AB0 /* CurrencyPicker.swift */,
+				0178176D2BA305D700EC5AB0 /* CurrencyInput.swift */,
 				017817592B8FFF4200EC5AB0 /* Assets.xcassets */,
 				0178175B2B8FFF4200EC5AB0 /* Preview Content */,
 			);
@@ -146,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0178176C2BA26EF700EC5AB0 /* CurrencyPicker.swift in Sources */,
 				017817642BA08B0100EC5AB0 /* Currency.swift in Sources */,
 				0178176A2BA1B55B00EC5AB0 /* CalculatorView.swift in Sources */,
+				0178176E2BA305D700EC5AB0 /* CurrencyInput.swift in Sources */,
 				017817562B8FFF4000EC5AB0 /* MoexCalculatorApp.swift in Sources */,
 				017817662BA08D6300EC5AB0 /* CalculatorModel.swift in Sources */,
 				017817682BA08F7A00EC5AB0 /* CalculatorViewModel.swift in Sources */,

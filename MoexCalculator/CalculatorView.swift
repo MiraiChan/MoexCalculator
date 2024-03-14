@@ -12,74 +12,12 @@ struct CalculatorView: View {
     @ObservedObject var viewModel: CalculatorViewModel
     
     var body: some View {
-    
+        
         List {
-            
-            HStack {
-                
-                VStack {
-                    Text(viewModel.topCurrency.flag)
-                        .font(.system(size: 200))
-                        .minimumScaleFactor(0.01)
-                        .aspectRatio(1, contentMode: .fit)
-                    
-                    Text(viewModel.topCurrency.rawValue)
-                        .font(.title2)
-                }
-                .frame(height: 100)
-                let topBinding = Binding<Double>(
-                    get: {
-                        viewModel.topAmount
-                    },
-                    set: {
-                        viewModel.setTopAmount($0)
-                    }
-                )
-                TextField("", value: topBinding, formatter: numberFormatter)
-                    .font(.largeTitle)
-                    .multilineTextAlignment(.trailing)
-                    .minimumScaleFactor(0.5)
-                    .keyboardType(.numberPad)
-            }
-            
-            HStack {
-                
-                VStack {
-                    Text(viewModel.bottomCurrency.flag)
-                        .font(.system(size: 200))
-                        .minimumScaleFactor(0.01)
-                        .aspectRatio(1, contentMode: .fit)
-                    
-                    Text(viewModel.bottomCurrency.rawValue)
-                        .font(.title2)
-                }
-                .frame(height: 100)
-                
-                let bottomBinding = Binding<Double>(
-                    get: {
-                        viewModel.bottomAmount
-                    },
-                    set: {
-                        viewModel.setBottomAmount($0)
-                    }
-                )
-
-                TextField("", value: bottomBinding, formatter: numberFormatter)
-                    .font(.largeTitle)
-                    .multilineTextAlignment(.trailing)
-                    .minimumScaleFactor(0.5)
-                    .keyboardType(.numberPad)
-            }
+            CurrencyInput(currency: viewModel.topCurrency, amount: viewModel.topAmount, calculator: viewModel.setTopAmount)
+            CurrencyInput(currency: viewModel.bottomCurrency, amount: viewModel.bottomAmount, calculator: viewModel.setBottomAmount)
         }
     }
-    
-    var numberFormatter: NumberFormatter = {
-        var nf = NumberFormatter()
-        nf.numberStyle = .decimal
-        nf.usesGroupingSeparator = false
-        nf.maximumFractionDigits = 2
-        return nf
-    }()
 }
 
 struct CalculatorView_Previews: PreviewProvider {
