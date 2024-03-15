@@ -34,14 +34,22 @@ struct CalculatorView: View {
                     }
                 
                 HStack {
-                    CurrencyPicker (currency: $viewModel.topCurrency, onChange: { _ in })
-                    CurrencyPicker (currency: $viewModel.bottomCurrency, onChange: { _ in })
+                    CurrencyPicker (currency: $viewModel.topCurrency, onChange: { _ in didChangeTopCurrency() })
+                    CurrencyPicker (currency: $viewModel.bottomCurrency, onChange: { _ in didChangeBottomCurrency() })
                 }
             }
             
             //размер всплывающего окна
             .presentationDetents([.fraction(0.3)])
         }
+    }
+    
+    private func didChangeTopCurrency() {
+        viewModel.updateTopAmount()
+    }
+    
+    private func didChangeBottomCurrency() {
+        viewModel.updateBottomAmount()
     }
 }
 
