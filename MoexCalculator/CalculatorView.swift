@@ -21,6 +21,11 @@ struct CalculatorView: View {
             CurrencyInput(currency: viewModel.bottomCurrency, amount: viewModel.bottomAmount, calculator: viewModel.setBottomAmount, tapHandler: {isPickerPresented.toggle()}
             )
         }
+        
+        .foregroundColor(.accentColor)
+        .onTapGesture {
+            hideKeyboard()
+        }
         //вызов модификатора .sheet, который вызывает всплывающее окно. isPresented - отобразить или скрыть, content - содержимое всплывающего окна.
         .sheet(isPresented: $isPickerPresented) {
             VStack(spacing: 16) {
@@ -56,5 +61,11 @@ struct CalculatorView: View {
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorView(viewModel: CalculatorViewModel())
+    }
+}
+
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
