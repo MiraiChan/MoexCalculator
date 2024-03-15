@@ -6,10 +6,19 @@
 //
 
 import Foundation
+import Combine
 
 final class CalculatorViewModel: ObservableObject {
     
     private var model = CalculatorModel()
+    
+    enum State {
+        case loading    // данные загружаются
+        case content    // данные загружены
+        case error      // ошибка при загрузке данных
+    }
+    
+    @Published var state: State = .loading
     
     @Published var topCurrency: Currency = .CNY
     @Published var bottomCurrency: Currency = .RUR
