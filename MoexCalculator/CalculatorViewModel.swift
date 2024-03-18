@@ -13,9 +13,9 @@ final class CalculatorViewModel: ObservableObject {
     private var model = CalculatorModel()
     
     enum State {
-        case loading    // данные загружаются
-        case content    // данные загружены
-        case error      // ошибка при загрузке данных
+        case loading
+        case content
+        case error
     }
     
     @Published var state: State = .loading
@@ -25,6 +25,35 @@ final class CalculatorViewModel: ObservableObject {
     
     @Published var topAmount: Double = 0
     @Published var bottomAmount: Double = 0
+    
+    // Data loader
+    private let loader: MoexDataLoader
+    
+    // Combine Subscriptions Storage
+    private var subscriptions = Set<AnyCancellable>()
+    
+    // An initializer that accepts a loader variable
+    init(with loader: MoexDataLoader = MoexDataLoader()) {
+        self.loader = loader
+        fetchData()
+    }
+    
+    // A function that starts a data query using the loader and sets the state variable depending on the result of the download
+    private func fetchData() {
+        loader.fetch().sink(
+            receiveCompletion: { [weak self] completion in
+                guard let self = self else { return }
+                if case .failure = completion {
+                    self.state = .error
+                }
+            },
+            receiveValue: { [weak self] currencyRates in
+                guard let self = self else { return }
+                self.model.setCurrencyRates(currencyRates)
+                self.state = .content
+            })
+        .store(in: &subscriptions)
+    }
     
     func setTopAmount(_ amount: Double) {
         topAmount = amount

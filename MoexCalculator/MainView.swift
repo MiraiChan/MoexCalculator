@@ -9,30 +9,30 @@ import SwiftUI
 
 struct MainView: View {
     
-    // Аналог ObservedObject. Создаётся в родительском объекте
+    // An analog of ObservedObject. It is created in the parent object
     @EnvironmentObject var viewModel: CalculatorViewModel
     
     var body: some View {
         
-        // Выбор состояния и отрисовка View в зависмости от состояния
+        // Selecting the state and rendering the View depending on the state
         switch viewModel.state {
             
-        // Индикатор загрузки
+        // The loading indicator
         case .loading:
             ProgressView()
             
-        // Экран, который отображается при ошибке: эмоджи и текст
+        // The screen that is displayed when an error occurs: emojis and text
         case .error:
             VStack {
                 Text("🤷‍♂️")
                     .font(.system(size: 100))
                     .padding()
-                Text("Что-то пошло не так.\n Пожалуйста, попробуйте позже.")
+                Text("Error.\n Something is wrong.")
                     .font(.body)
             }
             .multilineTextAlignment(.center)
         
-        // Экран калькулятора, который отображается при успешной загрузке данных
+        // The calculator screen that is displayed when the data is loaded successfully
         case .content:
             CalculatorView()
             
