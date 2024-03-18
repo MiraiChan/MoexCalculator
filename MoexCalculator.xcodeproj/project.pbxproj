@@ -32,7 +32,7 @@
 		0178176B2BA26EF700EC5AB0 /* CurrencyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPicker.swift; sourceTree = "<group>"; };
 		0178176D2BA305D700EC5AB0 /* CurrencyInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInput.swift; sourceTree = "<group>"; };
 		0178176F2BA472D800EC5AB0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		017817752BA67CA100EC5AB0 /* MoexDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoexDataLoader.swift; path = MoexCalculator/MoexDataLoader.swift; sourceTree = "<group>"; };
+		017817752BA67CA100EC5AB0 /* MoexDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoexDataLoader.swift; sourceTree = "<group>"; };
 		017817772BA8732E00EC5AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +50,6 @@
 		017817492B8FFF4000EC5AB0 = {
 			isa = PBXGroup;
 			children = (
-				017817752BA67CA100EC5AB0 /* MoexDataLoader.swift */,
 				017817542B8FFF4000EC5AB0 /* MoexCalculator */,
 				017817532B8FFF4000EC5AB0 /* Products */,
 			);
@@ -68,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				017817772BA8732E00EC5AB0 /* Info.plist */,
+				017817752BA67CA100EC5AB0 /* MoexDataLoader.swift */,
 				017817552B8FFF4000EC5AB0 /* MoexCalculatorApp.swift */,
 				017817692BA1B55B00EC5AB0 /* CalculatorView.swift */,
 				017817632BA08B0100EC5AB0 /* Currency.swift */,
